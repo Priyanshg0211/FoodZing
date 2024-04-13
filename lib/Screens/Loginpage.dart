@@ -104,6 +104,32 @@ class _loginpageState extends State<loginpage> {
                 keyboardType: TextInputType.visiblePassword,
               ),
             ),
+             SizedBox(
+              height: 30,
+            ),
+            MediaQuery(
+              data: MediaQuery.of(context).copyWith(),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  fixedSize: Size(320, 70),
+                  backgroundColor: Colors.black,
+                ),
+                onPressed: () {
+                  print('The button is Pressed');
+                },
+                child: Text(
+                  'Login',
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontSize: 15.0,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
