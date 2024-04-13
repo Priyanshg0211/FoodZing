@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodzing/Screens/Loginpage.dart';
 
 class Intropage extends StatelessWidget {
   const Intropage({super.key});
@@ -86,6 +87,8 @@ class Intropage extends StatelessWidget {
                   backgroundColor: Colors.black,
                 ),
                 onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => loginpage()));
                   print('The button is Pressed');
                 },
                 child: Text(
