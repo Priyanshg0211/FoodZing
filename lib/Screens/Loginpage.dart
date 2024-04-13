@@ -46,6 +46,40 @@ class _loginpageState extends State<loginpage> {
                 ),
               ),
             ),
+            SizedBox(
+              height: 40,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width * 0.9,
+              child: TextFormField(
+                cursorColor: Colors.black,
+                controller: _emailController,
+                decoration: InputDecoration(
+                  labelText: 'Email',
+                  labelStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
+                  border: OutlineInputBorder(),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                  ),
+                  hintText: 'Enter your email',
+                ),
+                keyboardType: TextInputType.emailAddress,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter your email';
+                  }
+                  if (!value.contains('@')) {
+                    return 'Please enter a valid email';
+                  }
+                  return null;
+                },
+              ),
+            ),
           ],
         ),
       ),
