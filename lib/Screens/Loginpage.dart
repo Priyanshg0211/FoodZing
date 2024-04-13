@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodzing/Screens/homepage.dart';
 
 class loginpage extends StatefulWidget {
   const loginpage({super.key});
@@ -118,6 +119,7 @@ class _loginpageState extends State<loginpage> {
                   backgroundColor: Colors.black,
                 ),
                 onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> homepage()));
                   print('The button is Pressed');
                 },
                 child: Text(
