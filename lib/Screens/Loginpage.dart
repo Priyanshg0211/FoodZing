@@ -80,6 +80,30 @@ class _loginpageState extends State<loginpage> {
                 },
               ),
             ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width * 0.9,
+              child: TextFormField(
+                cursorColor: Colors.black,
+                controller: _passwordController,
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                  labelStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
+                  border: OutlineInputBorder(),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                      borderRadius: BorderRadius.circular(8)),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                  ),
+                  hintText: 'Enter your Password',
+                ),
+                keyboardType: TextInputType.visiblePassword,
+              ),
+            ),
           ],
         ),
       ),
