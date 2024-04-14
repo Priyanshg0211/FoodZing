@@ -1,4 +1,4 @@
-# FoodZing Application README
+# Project 2: FoodZing - Flutter Widget Implementation
 
 ## Introduction
 Welcome to FoodZing! This is a project developed as part of Project 2 for learning basic implementation of Flutter. The main objective of this project is to apply fundamental Flutter concepts to create a functional application. In this project, we have utilized various Flutter widgets such as Rows, Columns, Stack, Scrollview, TextFormFields, ElevatedButton, and Bottom Navigation. The UI design was initially created using Figma and then implemented in Flutter.
