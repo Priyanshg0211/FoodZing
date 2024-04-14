@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -8,6 +9,7 @@ class homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFFF2F2F2),
         leading: Icon(
           Icons.menu,
           color: Colors.grey,
@@ -21,16 +23,20 @@ class homepage extends StatelessWidget {
               )),
         ],
       ),
+      backgroundColor: Colors.grey[200],
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            child: Text(
-              'Delicious\nfood for you',
-              style: TextStyle(
-                  fontFamily: 'SFPro',
-                  fontSize: 22.0,
-                  fontWeight: FontWeight.bold),
+          Padding(
+            padding: const EdgeInsets.only(left: 20, top: 30),
+            child: Container(
+              child: Text(
+                'Delicious\nfood for you',
+                style: TextStyle(
+                    fontFamily: 'SFPro',
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           ),
           SizedBox(
@@ -70,115 +76,360 @@ class homepage extends StatelessWidget {
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  child: TextButton(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    child: TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Foods',
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontSize: 14.0,
+                              color: Colors.black),
+                        )),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    child: TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Drinks',
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontSize: 14.0,
+                              color: Colors.black),
+                        )),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    child: TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Snacks',
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontSize: 14.0,
+                              color: Colors.black),
+                        )),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    child: TextButton(
                       onPressed: () {},
                       child: Text(
-                        'Foods',
+                        'Desserts',
                         style: TextStyle(
                             fontFamily: 'Poppins',
                             fontSize: 14.0,
                             color: Colors.black),
-                      )),
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                Container(
-                  child: TextButton(
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    child: TextButton(
                       onPressed: () {},
                       child: Text(
-                        'Drinks',
+                        'Biryani',
                         style: TextStyle(
                             fontFamily: 'Poppins',
                             fontSize: 14.0,
                             color: Colors.black),
-                      )),
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                Container(
-                  child: TextButton(
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    child: TextButton(
                       onPressed: () {},
                       child: Text(
-                        'Snacks',
+                        'Panner',
                         style: TextStyle(
                             fontFamily: 'Poppins',
                             fontSize: 14.0,
                             color: Colors.black),
-                      )),
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                Container(
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Desserts',
-                      style: TextStyle(
-                          fontFamily: 'Poppins',
-                          fontSize: 14.0,
-                          color: Colors.black),
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                Container(
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Biryani',
-                      style: TextStyle(
-                          fontFamily: 'Poppins',
-                          fontSize: 14.0,
-                          color: Colors.black),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                Container(
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Panner',
-                      style: TextStyle(
-                          fontFamily: 'Poppins',
-                          fontSize: 14.0,
-                          color: Colors.black),
-                    ),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           SizedBox(
             height: 30,
           ),
-          Row(
-            children: [
-              Container(
-                height: MediaQuery.of(context).size.height * 0.5,
-                width: MediaQuery.of(context).size.width * 0.7,
-                decoration: BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.circular(20.0),
+          Container(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20,top: 20),
+                child: Row(
+                children: [
+                    Stack(
+                      children: [
+                        Container(
+                          height: MediaQuery.of(context).size.height * 0.4,
+                          width: MediaQuery.of(context).size.width * 0.6,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black38,
+                                blurRadius: 15.0,
+                                blurStyle: BlurStyle.outer,
+                              )
+                            ],
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Center(
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                  left: 30,
+                                  top: 20,
+                                ),
+                                child: Container(
+                                  height: 200,
+                                  width: 200,
+                                  child: Image.asset('assets/images/food 1.png'),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              child: Text(
+                                'Veggie tomato mix',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 18.0,
+                                    color: Colors.black),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              child: Text(
+                                'N1,900',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 16.0,
+                                    color: Colors.black),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 20),
+                    Stack(
+                      children: [
+                        Container(
+                          height: MediaQuery.of(context).size.height * 0.4,
+                          width: MediaQuery.of(context).size.width * 0.6,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black38,
+                                blurRadius: 15.0,
+                                blurStyle: BlurStyle.outer,
+                              )
+                            ],
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Center(
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                  left: 30,
+                                  top: 20,
+                                ),
+                                child: Container(
+                                  height: 200,
+                                  width: 200,
+                                  child: Image.asset('assets/images/food3.png'),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              child: Text(
+                                'Veggie tomato mix',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 18.0,
+                                    color: Colors.black),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              child: Text(
+                                'N1,900',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 16.0,
+                                    color: Colors.black),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 20),
+                    Stack(
+                      children: [
+                        Container(
+                          height: MediaQuery.of(context).size.height * 0.4,
+                          width: MediaQuery.of(context).size.width * 0.6,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black38,
+                                blurRadius: 15.0,
+                                blurStyle: BlurStyle.outer,
+                              )
+                            ],
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Center(
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                  left: 30,
+                                  top: 20,
+                                ),
+                                child: Container(
+                                  height: 200,
+                                  width: 200,
+                                  child: Image.asset('assets/images/food4.png'),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              child: Text(
+                                'Veggie tomato mix',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 18.0,
+                                    color: Colors.black),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              child: Text(
+                                'N1,900',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 16.0,
+                                    color: Colors.black),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 20),
+                    Stack(
+                      children: [
+                        Container(
+                          height: MediaQuery.of(context).size.height * 0.4,
+                          width: MediaQuery.of(context).size.width * 0.6,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black38,
+                                blurRadius: 15.0,
+                                blurStyle: BlurStyle.outer,
+                              )
+                            ],
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Center(
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                  left: 30,
+                                  top: 20,
+                                ),
+                                child: Container(
+                                  height: 200,
+                                  width: 200,
+                                  child: Image.asset('assets/images/food5.png'),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              child: Text(
+                                'Veggie tomato mix',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 18.0,
+                                    color: Colors.black),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              child: Text(
+                                'N1,900',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 16.0,
+                                    color: Colors.black),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
-            ],
+            ),
           ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
         fixedColor: Colors.black,
         items: const [
           BottomNavigationBarItem(
