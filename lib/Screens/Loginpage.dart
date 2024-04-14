@@ -25,13 +25,13 @@ class _loginpageState extends State<loginpage> {
           children: [
             Center(
               child: Container(
-                height: MediaQuery.of(context).size.height * 0.4,
+                height: MediaQuery.of(context).size.height * 0.3,
                 width: MediaQuery.of(context).size.width * 0.9,
-                child: Image.asset('assets/images/food2.png'),
+                child: Image.asset('assets/images/burger.png'),
               ),
             ),
             SizedBox(
-              height: 50,
+              height: 30,
             ),
             Center(
               child: Container(
@@ -41,10 +41,24 @@ class _loginpageState extends State<loginpage> {
                   'Login',
                   style: TextStyle(
                       fontFamily: 'SFPro',
-                      fontSize: 35.0,
+                      fontSize: 40.0,
                       color: Colors.black,
                       fontWeight: FontWeight.w900),
                 ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              child: Text(
+                'Enter your login detail',
+                style: TextStyle(
+                    fontFamily: 'SFPro',
+                    fontSize: 22.0,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    ),
               ),
             ),
             SizedBox(
@@ -105,7 +119,7 @@ class _loginpageState extends State<loginpage> {
                 keyboardType: TextInputType.visiblePassword,
               ),
             ),
-             SizedBox(
+            SizedBox(
               height: 30,
             ),
             MediaQuery(
@@ -119,7 +133,8 @@ class _loginpageState extends State<loginpage> {
                   backgroundColor: Colors.black,
                 ),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> homepage()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => homepage()));
                   print('The button is Pressed');
                 },
                 child: Text(
