@@ -9,21 +9,21 @@ class homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFF2F2F2),
+        backgroundColor: Color(0xFFF2F2F2).withOpacity(0.1),
         leading: Icon(
           Icons.menu,
-          color: Colors.grey,
+          color: Colors.black,
         ),
         actions: <Widget>[
           IconButton(
               onPressed: () {},
               icon: Icon(
                 Icons.shopping_cart,
-                color: Colors.grey,
+                color: Colors.black,
               )),
         ],
       ),
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.white,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -33,14 +33,15 @@ class homepage extends StatelessWidget {
               child: Text(
                 'Delicious\nfood for you',
                 style: TextStyle(
-                    fontFamily: 'SFPro',
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.bold),
+                  fontFamily: 'SFPro',
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.w900,
+                ),
               ),
             ),
           ),
           SizedBox(
-            height: 20,
+            height: 40,
           ),
           Center(
             child: Container(
@@ -72,7 +73,7 @@ class homepage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 30,
+            height: 40,
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -170,29 +171,22 @@ class homepage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 30,
+            height: 10,
           ),
           Container(
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
-                padding: const EdgeInsets.only(left: 20,top: 20),
+                padding: const EdgeInsets.only(left: 20, top: 20),
                 child: Row(
-                children: [
+                  children: [
                     Stack(
                       children: [
                         Container(
                           height: MediaQuery.of(context).size.height * 0.4,
                           width: MediaQuery.of(context).size.width * 0.6,
                           decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black38,
-                                blurRadius: 15.0,
-                                blurStyle: BlurStyle.outer,
-                              )
-                            ],
-                            color: Colors.white,
+                            color: Colors.grey.withOpacity(0.1),
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                         ),
@@ -207,7 +201,8 @@ class homepage extends StatelessWidget {
                                 child: Container(
                                   height: 200,
                                   width: 200,
-                                  child: Image.asset('assets/images/food 1.png'),
+                                  child:
+                                      Image.asset('assets/images/food 1.png'),
                                 ),
                               ),
                             ),
@@ -217,22 +212,27 @@ class homepage extends StatelessWidget {
                             Container(
                               child: Text(
                                 'Veggie tomato mix',
+                                textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    fontSize: 18.0,
-                                    color: Colors.black),
+                                  fontFamily: 'Poppins',
+                                  fontSize: 20.0,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 5,
                             ),
                             Container(
                               child: Text(
                                 'N1,900',
                                 style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    fontSize: 16.0,
-                                    color: Colors.black),
+                                  fontFamily: 'Poppins',
+                                  fontSize: 18.0,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ),
                             ),
                           ],
@@ -246,14 +246,7 @@ class homepage extends StatelessWidget {
                           height: MediaQuery.of(context).size.height * 0.4,
                           width: MediaQuery.of(context).size.width * 0.6,
                           decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black38,
-                                blurRadius: 15.0,
-                                blurStyle: BlurStyle.outer,
-                              )
-                            ],
-                            color: Colors.white,
+                            color: Colors.grey.withOpacity(0.1),
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                         ),
@@ -279,9 +272,11 @@ class homepage extends StatelessWidget {
                               child: Text(
                                 'Veggie tomato mix',
                                 style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    fontSize: 18.0,
-                                    color: Colors.black),
+                                  fontFamily: 'Poppins',
+                                  fontSize: 20.0,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                             SizedBox(
@@ -292,8 +287,9 @@ class homepage extends StatelessWidget {
                                 'N1,900',
                                 style: TextStyle(
                                     fontFamily: 'Poppins',
-                                    fontSize: 16.0,
-                                    color: Colors.black),
+                                    fontSize: 18.0,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400),
                               ),
                             ),
                           ],
@@ -307,14 +303,7 @@ class homepage extends StatelessWidget {
                           height: MediaQuery.of(context).size.height * 0.4,
                           width: MediaQuery.of(context).size.width * 0.6,
                           decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black38,
-                                blurRadius: 15.0,
-                                blurStyle: BlurStyle.outer,
-                              )
-                            ],
-                            color: Colors.white,
+                            color: Colors.grey.withOpacity(0.1),
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                         ),
@@ -341,8 +330,9 @@ class homepage extends StatelessWidget {
                                 'Veggie tomato mix',
                                 style: TextStyle(
                                     fontFamily: 'Poppins',
-                                    fontSize: 18.0,
-                                    color: Colors.black),
+                                    fontSize: 20.0,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w600),
                               ),
                             ),
                             SizedBox(
@@ -353,8 +343,9 @@ class homepage extends StatelessWidget {
                                 'N1,900',
                                 style: TextStyle(
                                     fontFamily: 'Poppins',
-                                    fontSize: 16.0,
-                                    color: Colors.black),
+                                    fontSize: 18.0,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400),
                               ),
                             ),
                           ],
@@ -368,14 +359,7 @@ class homepage extends StatelessWidget {
                           height: MediaQuery.of(context).size.height * 0.4,
                           width: MediaQuery.of(context).size.width * 0.6,
                           decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black38,
-                                blurRadius: 15.0,
-                                blurStyle: BlurStyle.outer,
-                              )
-                            ],
-                            color: Colors.white,
+                            color: Colors.grey.withOpacity(0.1),
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                         ),
@@ -402,8 +386,9 @@ class homepage extends StatelessWidget {
                                 'Veggie tomato mix',
                                 style: TextStyle(
                                     fontFamily: 'Poppins',
-                                    fontSize: 18.0,
-                                    color: Colors.black),
+                                    fontSize: 20.0,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w600),
                               ),
                             ),
                             SizedBox(
@@ -414,8 +399,9 @@ class homepage extends StatelessWidget {
                                 'N1,900',
                                 style: TextStyle(
                                     fontFamily: 'Poppins',
-                                    fontSize: 16.0,
-                                    color: Colors.black),
+                                    fontSize: 18.0,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400),
                               ),
                             ),
                           ],
